@@ -3,182 +3,385 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Social Media Academy | Abhishek Nair</title>
+    <title>The Social Media Academy | By Abhishek Nair</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; }
-        .neon-green { color: #DFFF00; }
-        .bg-neon-green { background-color: #DFFF00; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #050505; 
+            color: #ffffff; 
+            scroll-behavior: smooth; 
+            overflow-x: hidden;
+        }
+        .neon-text { color: #DFFF00; }
+        .neon-bg { background-color: #DFFF00; }
+        .neon-border { border-color: #DFFF00; }
+        
+        .glass-panel { 
+            background: rgba(25, 25, 25, 0.4); 
+            backdrop-filter: blur(16px); 
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+        .glass-panel:hover {
+            border-color: rgba(223, 255, 0, 0.3);
+            background: rgba(35, 35, 35, 0.6);
+        }
+        
+        .text-outline { 
+            -webkit-text-stroke: 1px rgba(255,255,255,0.2); 
+            color: transparent; 
+        }
+        .text-outline-neon {
+            -webkit-text-stroke: 1px #DFFF00; 
+            color: transparent; 
+        }
+        
+        .glow-shadow { box-shadow: 0 0 40px rgba(223, 255, 0, 0.15); }
+        .glow-shadow-intense { box-shadow: 0 0 60px rgba(223, 255, 0, 0.3); }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #DFFF00; }
+
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
-<body>
+<body class="antialiased selection:bg-[#DFFF00] selection:text-black">
 
-    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="text-xl font-black uppercase italic">THE <span class="neon-green">ACADEMY</span></div>
-            <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-400">
-                <a href="#why" class="hover:text-white">Why us</a>
-                <a href="#learn" class="hover:text-white">What you'll learn</a>
-                <a href="#pricing" class="hover:text-white">Pricing</a>
+    <nav class="fixed w-full z-50 bg-[#050505]/80 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <div class="text-2xl font-black uppercase tracking-tighter italic">THE <span class="neon-text">ACADEMY</span></div>
+            <div class="hidden lg:flex space-x-12 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400">
+                <a href="#stats" class="hover:text-[#DFFF00] transition-colors">Experience</a>
+                <a href="#curriculum" class="hover:text-[#DFFF00] transition-colors">Curriculum</a>
+                <a href="#testimonials" class="hover:text-[#DFFF00] transition-colors">Results</a>
+                <a href="#pricing" class="hover:text-[#DFFF00] transition-colors">Pricing</a>
+                <a href="#faq" class="hover:text-[#DFFF00] transition-colors">FAQ</a>
             </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform" class="bg-neon-green text-black px-6 py-2 rounded-full font-black text-xs uppercase">Join Now</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform" class="neon-bg text-black px-8 py-3.5 rounded-full font-black text-[11px] uppercase tracking-widest hover:scale-105 transition-transform duration-300 glow-shadow">Join Cohort</a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 px-6 text-center">
-        <img src="Gemini_Generated_Image_9ejnt49ejnt49ejn.jpg" class="w-full max-w-4xl mx-auto rounded-2xl mb-12 border border-white/10 shadow-2xl">
-        <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter uppercase leading-none">NOT JUST A <br><span class="neon-green italic">GROWTH</span> COHORT</h1>
-        <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10 uppercase tracking-tight">The ultimate beginner-friendly cohort, now powered with the most insane AI tools ever.</p>
-        <a href="#pricing" class="bg-neon-green text-black px-10 py-4 rounded-full font-black uppercase text-sm">Join now</a>
-    </section>
-
-    <section id="why" class="py-24 px-6 bg-white/5">
-        <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase leading-tight text-white">Teaching my <br><span class="neon-green italic">6 YEARS</span> of experience in 3 months!</h2>
-            <p class="text-gray-400 mb-12 text-sm max-w-2xl mx-auto">With years of proven success in content creation and building a thriving marketing agency, we reveal the powerful secrets to dominate the creative fields.</p>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="glass p-6 rounded-2xl">
-                    <div class="text-neon-green font-black text-2xl">501K</div>
-                    <div class="text-[10px] text-gray-500 uppercase font-bold">Subscribers</div>
-                </div>
-                <div class="glass p-6 rounded-2xl">
-                    <div class="text-neon-green font-black text-2xl">234K</div>
-                    <div class="text-[10px] text-gray-500 uppercase font-bold">Followers</div>
-                </div>
-                <div class="glass p-6 rounded-2xl">
-                    <div class="text-neon-green font-black text-2xl">65.9K</div>
-                    <div class="text-[10px] text-gray-500 uppercase font-bold">Followers</div>
-                </div>
-                <div class="glass p-6 rounded-2xl">
-                    <div class="text-neon-green font-black text-2xl">846K</div>
-                    <div class="text-[10px] text-gray-500 uppercase font-bold">Subscribers</div>
-                </div>
+    <section class="relative pt-48 pb-32 px-6 flex flex-col items-center justify-center min-h-screen text-center overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#DFFF00]/5 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="inline-flex items-center gap-3 px-5 py-2 border border-[#DFFF00]/30 rounded-full bg-[#DFFF00]/5 text-[#DFFF00] text-[10px] font-black uppercase tracking-[0.3em] mb-12">
+                <span class="w-2 h-2 rounded-full neon-bg animate-pulse"></span>
+                Abhishek Nair Presents
+            </div>
+            
+            <h1 class="text-6xl md:text-[8rem] font-black mb-8 tracking-tighter leading-[0.85] uppercase">
+                NOT JUST A <br>
+                <span class="text-outline-neon italic block mt-4">GROWTH</span> 
+                COHORT
+            </h1>
+            
+            <p class="text-gray-400 text-xl md:text-2xl mb-16 max-w-3xl mx-auto font-medium leading-relaxed">
+                The ultimate beginner-friendly ecosystem for creators, now powered with the most insane AI tools ever built.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#pricing" class="w-full sm:w-auto neon-bg text-black px-14 py-6 rounded-full font-black uppercase text-sm tracking-[0.2em] hover:scale-105 transition-transform duration-300 glow-shadow-intense">Enroll in Academy</a>
+                <a href="#curriculum" class="w-full sm:w-auto border border-white/20 text-white px-14 py-6 rounded-full font-black uppercase text-sm tracking-[0.2em] hover:bg-white hover:text-black transition-colors duration-300">View Syllabus</a>
             </div>
         </div>
     </section>
 
-    <section id="learn" class="py-24 px-6">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-black mb-16 uppercase italic text-center">What you'll learn in this <span class="neon-green">Cohort</span></h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="glass p-10 rounded-[40px] border border-white/10">
-                    <div class="text-5xl font-black text-gray-800 mb-4">1</div>
-                    <h3 class="text-2xl font-black mb-4 uppercase">Advanced Video Editing</h3>
-                    <p class="text-gray-400 text-sm mb-6">Unleash your creativity with cutting-edge AI tools for design, content, and video.</p>
-                    <ul class="text-xs space-y-2 text-gray-300">
-                        <li>+ A → Z of Video Editing</li>
-                        <li>+ Advanced Motion Graphics in After Effects</li>
-                        <li>+ Advanced Color Grading in DaVinci Resolve</li>
-                    </ul>
-                </div>
-                <div class="glass p-10 rounded-[40px] border border-white/10">
-                    <div class="text-5xl font-black text-gray-800 mb-4">2</div>
-                    <h3 class="text-2xl font-black mb-4 uppercase">Social Media Growth</h3>
-                    <p class="text-gray-400 text-sm mb-6">Master the algorithm and build a personal brand that attracts high-ticket clients.</p>
-                    <ul class="text-xs space-y-2 text-gray-300">
-                        <li>+ Content Planning & Packaging</li>
-                        <li>+ Scripting & Storytelling</li>
-                        <li>+ SEO & Viral Hook Strategy</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-white/5">
+    <section id="stats" class="py-32 px-6 bg-[#0a0a0a] border-t border-b border-white/5">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-4xl font-black mb-16 uppercase italic">More <span class="neon-green">Success Stories</span></h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass p-8 rounded-3xl text-sm leading-relaxed text-gray-400">
-                    "Enrolling was one of my best decisions. Within a month, I got an internship at an AI startup. This cohort teaches way beyond editing."
-                    <div class="mt-6 flex items-center">
-                        <div class="w-8 h-8 bg-gray-700 rounded-full mr-3"></div>
-                        <span class="font-black text-white uppercase text-[10px]">Deepak Divakar</span>
-                    </div>
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5">
+                    <h2 class="text-5xl md:text-6xl font-black mb-8 uppercase tracking-tighter leading-tight">
+                        TEACHING MY <br><span class="neon-text">6 YEARS</span> <br> OF EXPERIENCE <br>IN 3 MONTHS
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed font-medium">
+                        With years of proven success in content creation and building a thriving marketing agency, I am revealing the exact blueprints used to dominate creative fields. No fluff, just raw systems.
+                    </p>
                 </div>
-                <div class="glass p-8 rounded-3xl text-sm leading-relaxed text-gray-400">
-                    "I started earning ₹50-60K a month from editing, which was unreal for me as a student. I am super grateful for the support!"
-                    <div class="mt-6 flex items-center">
-                        <div class="w-8 h-8 bg-gray-700 rounded-full mr-3"></div>
-                        <span class="font-black text-white uppercase text-[10px]">Akash</span>
+                
+                <div class="lg:col-span-7 grid grid-cols-2 gap-6">
+                    <div class="glass-panel p-10 rounded-[2rem] flex flex-col justify-center transition-all duration-300">
+                        <h4 class="text-5xl md:text-6xl font-black neon-text mb-3 tracking-tighter">501K</h4>
+                        <p class="text-[11px] uppercase font-black text-gray-500 tracking-[0.2em]">Subscribers</p>
                     </div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-sm leading-relaxed text-gray-400">
-                    "Before joining, I had no idea how to start freelancing. Now I earn ₹40K a month. The mentors genuinely help you grow."
-                    <div class="mt-6 flex items-center">
-                        <div class="w-8 h-8 bg-gray-700 rounded-full mr-3"></div>
-                        <span class="font-black text-white uppercase text-[10px]">Satwik</span>
+                    <div class="glass-panel p-10 rounded-[2rem] flex flex-col justify-center transition-all duration-300">
+                        <h4 class="text-5xl md:text-6xl font-black text-white mb-3 tracking-tighter">234K</h4>
+                        <p class="text-[11px] uppercase font-black text-gray-500 tracking-[0.2em]">Followers</p>
+                    </div>
+                    <div class="glass-panel p-10 rounded-[2rem] flex flex-col justify-center transition-all duration-300">
+                        <h4 class="text-5xl md:text-6xl font-black text-white mb-3 tracking-tighter">65.9K</h4>
+                        <p class="text-[11px] uppercase font-black text-gray-500 tracking-[0.2em]">Followers</p>
+                    </div>
+                    <div class="glass-panel p-10 rounded-[2rem] flex flex-col justify-center transition-all duration-300">
+                        <h4 class="text-5xl md:text-6xl font-black text-white mb-3 tracking-tighter">846K</h4>
+                        <p class="text-[11px] uppercase font-black text-gray-500 tracking-[0.2em]">Subscribers</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-            <div class="glass p-10 rounded-[40px] flex flex-col justify-between">
-                <div>
-                    <h3 class="text-xs font-black text-gray-500 mb-4 uppercase tracking-widest">Essential</h3>
-                    <div class="text-5xl font-black mb-8 italic">₹4999</div>
-                    <ul class="text-xs space-y-4 text-gray-400 mb-12">
-                        <li>+ Studio Quality Lectures</li>
-                        <li>+ Weekly 2 live classes</li>
-                        <li>+ Access to community</li>
-                    </ul>
+    <section class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-4xl md:text-5xl font-black mb-20 uppercase tracking-tighter">Why The <span class="neon-text italic">Academy</span>?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-panel p-12 rounded-[2.5rem]">
+                    <div class="w-16 h-16 rounded-2xl bg-[#DFFF00]/10 flex items-center justify-center mb-8 border border-[#DFFF00]/20">
+                        <svg class="w-8 h-8 text-[#DFFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">AI-First Approach</h3>
+                    <p class="text-gray-400 font-medium leading-relaxed">Stop editing like it's 2020. We integrate the latest AI workflows to cut your production time by 70% while drastically increasing quality.</p>
                 </div>
-                <a href="#" class="block w-full py-4 text-center border border-white/20 rounded-xl font-bold uppercase text-[10px]">Join Now</a>
-            </div>
-            <div class="glass p-10 rounded-[40px] border-2 border-neon-green relative flex flex-col justify-between transform scale-105">
-                <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-neon-green text-black px-4 py-1 rounded-full text-[10px] font-black uppercase">Most Popular</span>
-                <div>
-                    <h3 class="text-xs font-black text-neon-green mb-4 uppercase tracking-widest">Elite</h3>
-                    <div class="text-5xl font-black mb-8 italic">₹6999</div>
-                    <ul class="text-xs space-y-4 text-white mb-12">
-                        <li>+ Everything In Essential</li>
-                        <li>+ Dedicated Mentors to Guide you</li>
-                        <li>+ BONUS: Weekly Masterclasses</li>
-                    </ul>
+                
+                <div class="glass-panel p-12 rounded-[2.5rem]">
+                    <div class="w-16 h-16 rounded-2xl bg-[#DFFF00]/10 flex items-center justify-center mb-8 border border-[#DFFF00]/20">
+                        <svg class="w-8 h-8 text-[#DFFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Agency Blueprint</h3>
+                    <p class="text-gray-400 font-medium leading-relaxed">Editing is just 50%. We teach you how to package your skills, find high-paying international clients, and build a scalable agency.</p>
                 </div>
-                <a href="#" class="block w-full py-4 text-center bg-neon-green text-black rounded-xl font-black uppercase text-xs">Join Now</a>
-            </div>
-            <div class="glass p-10 rounded-[40px] flex flex-col justify-between bg-red-950/10 border-red-500/20">
-                <div>
-                    <h3 class="text-xs font-black text-red-500 mb-4 uppercase tracking-widest">Ultimate</h3>
-                    <div class="text-5xl font-black mb-8 italic">₹14999</div>
-                    <ul class="text-xs space-y-4 text-gray-400 mb-12">
-                        <li>+ Everything in Elite</li>
-                        <li>+ Personal Learning Manager</li>
-                        <li>+ Access to Placement support</li>
-                    </ul>
+                
+                <div class="glass-panel p-12 rounded-[2.5rem]">
+                    <div class="w-16 h-16 rounded-2xl bg-[#DFFF00]/10 flex items-center justify-center mb-8 border border-[#DFFF00]/20">
+                        <svg class="w-8 h-8 text-[#DFFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase mb-4 tracking-tight">Elite Network</h3>
+                    <p class="text-gray-400 font-medium leading-relaxed">Your network is your net worth. Join a private community of driven editors, creators, and founders all scaling together.</p>
                 </div>
-                <a href="#" class="block w-full py-4 text-center border border-red-500/20 rounded-xl font-bold uppercase text-[10px] text-red-500">Join Now</a>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-white/5">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl font-black text-center mb-16 uppercase italic">Got <span class="neon-green">Questions?</span></h2>
+    <section id="curriculum" class="py-32 px-6 bg-[#0a0a0a] border-t border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-center text-5xl md:text-6xl font-black mb-24 uppercase tracking-tighter">THE <span class="neon-text italic">ROADMAP</span></h2>
+            
+            <div class="space-y-8">
+                <div class="glass-panel p-10 md:p-14 rounded-[2.5rem] relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-white/20 group-hover:bg-[#DFFF00] transition-colors duration-500"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-6">
+                        <div>
+                            <div class="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-2">Weeks 1-3</div>
+                            <h3 class="text-3xl font-black uppercase tracking-tight">Advanced Video Editing</h3>
+                        </div>
+                        <div class="text-5xl font-black text-outline">01</div>
+                    </div>
+                    <p class="text-gray-400 text-lg mb-8 font-medium">Unleash your creativity with cutting-edge tools for design, content, and video production from the ground up.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> A to Z of Premiere Pro</div>
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> Advanced After Effects Motion</div>
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> Pro Color Grading in DaVinci</div>
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> Sound Design Architecture</div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-10 md:p-14 rounded-[2.5rem] relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-white/20 group-hover:bg-[#DFFF00] transition-colors duration-500"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-6">
+                        <div>
+                            <div class="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-2">Weeks 4-7</div>
+                            <h3 class="text-3xl font-black uppercase tracking-tight">Social Media Growth</h3>
+                        </div>
+                        <div class="text-5xl font-black text-outline">02</div>
+                    </div>
+                    <p class="text-gray-400 text-lg mb-8 font-medium">Master the algorithms and build a personal brand that acts as a magnet for high-ticket international clients.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> Content Planning & Strategy</div>
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> Scripting & Storytelling Formulas</div>
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> Hook Psychology for Virality</div>
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> AI Content Generation Workflows</div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-10 md:p-14 rounded-[2.5rem] relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-white/20 group-hover:bg-[#DFFF00] transition-colors duration-500"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-6">
+                        <div>
+                            <div class="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-2">Weeks 8-12</div>
+                            <h3 class="text-3xl font-black uppercase tracking-tight">Monetization & Agency</h3>
+                        </div>
+                        <div class="text-5xl font-black text-outline">03</div>
+                    </div>
+                    <p class="text-gray-400 text-lg mb-8 font-medium">The exact systems, templates, and outreach methods to scale your income to ₹1L/month and beyond.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> Client Acquisition Systems</div>
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> Outreach & Cold Emails that Convert</div>
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> Pricing & Negotiation Tactics</div>
+                        <div class="bg-white/5 p-5 rounded-2xl border border-white/5 font-bold text-sm tracking-wide flex items-center"><span class="neon-text mr-3">✦</span> Building a Scalable Agency Team</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-black mb-20 text-center uppercase tracking-tighter">STUDENT <span class="neon-text italic">SUCCESS</span></h2>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="glass-panel p-12 rounded-[2.5rem] relative flex flex-col justify-between">
+                    <div class="text-6xl text-[#DFFF00] opacity-20 absolute top-8 right-8 font-serif leading-none">"</div>
+                    <p class="text-gray-300 text-lg mb-10 relative z-10 leading-relaxed font-medium">
+                        "Enrolling was one of my best decisions. Within a month, I got an internship and now I'm working at an AI startup. The curriculum covers so much more than just basic editing."
+                    </p>
+                    <div>
+                        <p class="font-black uppercase text-sm tracking-widest text-white">Deepak Divakar</p>
+                        <p class="text-[#DFFF00] text-[10px] font-black uppercase mt-1 tracking-[0.2em]">Internship Secured</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-12 rounded-[2.5rem] relative flex flex-col justify-between border-[#DFFF00]/20 bg-[#DFFF00]/5">
+                    <div class="text-6xl text-[#DFFF00] opacity-20 absolute top-8 right-8 font-serif leading-none">"</div>
+                    <p class="text-gray-300 text-lg mb-10 relative z-10 leading-relaxed font-medium">
+                        "I earned ₹50-60k a month from editing right after the cohort. The biggest takeaway for me wasn't just the editing techniques, but how to actually build and structure an agency."
+                    </p>
+                    <div>
+                        <p class="font-black uppercase text-sm tracking-widest text-white">Akash</p>
+                        <p class="text-[#DFFF00] text-[10px] font-black uppercase mt-1 tracking-[0.2em]">Agency Founder</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-12 rounded-[2.5rem] relative flex flex-col justify-between">
+                    <div class="text-6xl text-[#DFFF00] opacity-20 absolute top-8 right-8 font-serif leading-none">"</div>
+                    <p class="text-gray-300 text-lg mb-10 relative z-10 leading-relaxed font-medium">
+                        "Before joining I was just an average student with zero experience. Now I consistently earn over ₹40k a month doing high-end video editing for international clients."
+                    </p>
+                    <div>
+                        <p class="font-black uppercase text-sm tracking-widest text-white">Satwik</p>
+                        <p class="text-[#DFFF00] text-[10px] font-black uppercase mt-1 tracking-[0.2em]">Freelance Editor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-32 px-6 bg-[#0a0a0a] border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6">THE <span class="neon-text italic">INVESTMENT</span></h2>
+                <p class="text-gray-500 uppercase tracking-[0.4em] text-xs font-black">Choose your path to growth</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-10 items-center">
+                <div class="glass-panel p-12 rounded-[3rem] flex flex-col h-full border border-white/10">
+                    <h3 class="text-sm font-black text-gray-400 mb-6 uppercase tracking-[0.3em]">Essential</h3>
+                    <div class="text-gray-600 line-through text-2xl mb-2 italic font-black">₹8000</div>
+                    <div class="text-6xl font-black mb-12 tracking-tighter">₹4999</div>
+                    
+                    <div class="space-y-5 mb-14 flex-grow text-gray-300 text-sm font-bold tracking-wide">
+                        <div class="flex items-start"><span class="text-gray-500 mr-4 font-black text-lg leading-none">+</span> Studio Quality Lectures</div>
+                        <div class="flex items-start"><span class="text-gray-500 mr-4 font-black text-lg leading-none">+</span> Weekly 2 Live Classes</div>
+                        <div class="flex items-start"><span class="text-gray-500 mr-4 font-black text-lg leading-none">+</span> Access to Community</div>
+                    </div>
+                    
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform" class="w-full py-6 rounded-2xl border-2 border-white/10 text-white font-black uppercase text-[11px] tracking-[0.2em] text-center hover:bg-white hover:text-black transition-all duration-300">Join Now</a>
+                </div>
+
+                <div class="glass-panel p-14 rounded-[3rem] border-2 border-[#DFFF00] bg-[#DFFF00]/5 relative flex flex-col h-full lg:scale-105 z-10 glow-shadow">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 neon-bg text-black text-[10px] font-black px-8 py-2.5 rounded-full uppercase tracking-[0.3em]">Most Popular</div>
+                    
+                    <h3 class="text-sm font-black text-[#DFFF00] mb-6 uppercase tracking-[0.3em]">Elite</h3>
+                    <div class="text-gray-500 line-through text-2xl mb-2 italic font-black">₹12,000</div>
+                    <div class="text-7xl font-black mb-12 tracking-tighter">₹6999</div>
+                    
+                    <div class="space-y-5 mb-14 flex-grow text-white text-sm font-bold tracking-wide">
+                        <div class="flex items-start"><span class="neon-text mr-4 font-black text-lg leading-none">+</span> Everything In Essential</div>
+                        <div class="flex items-start"><span class="neon-text mr-4 font-black text-lg leading-none">+</span> Dedicated Mentors to Guide</div>
+                        <div class="flex items-start"><span class="neon-text mr-4 font-black text-lg leading-none">+</span> BONUS: Weekly Masterclasses</div>
+                        <div class="flex items-start"><span class="neon-text mr-4 font-black text-lg leading-none">+</span> Premium Asset Library</div>
+                    </div>
+                    
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform" class="w-full py-6 rounded-2xl neon-bg text-black font-black uppercase text-[12px] tracking-[0.2em] text-center hover:scale-105 transition-transform duration-300">Join Now</a>
+                </div>
+
+                <div class="glass-panel p-12 rounded-[3rem] flex flex-col h-full border border-red-500/30 bg-red-950/10">
+                    <h3 class="text-sm font-black text-red-500 mb-6 uppercase tracking-[0.3em]">Ultimate</h3>
+                    <div class="text-gray-600 line-through text-2xl mb-2 italic font-black">₹25,000</div>
+                    <div class="text-6xl font-black mb-12 tracking-tighter">₹14999</div>
+                    
+                    <div class="space-y-5 mb-14 flex-grow text-gray-300 text-sm font-bold tracking-wide">
+                        <div class="flex items-start"><span class="text-red-500 mr-4 font-black text-lg leading-none">+</span> Everything in Elite</div>
+                        <div class="flex items-start"><span class="text-red-500 mr-4 font-black text-lg leading-none">+</span> Personal Learning Manager</div>
+                        <div class="flex items-start"><span class="text-red-500 mr-4 font-black text-lg leading-none">+</span> Access to Placement Support</div>
+                        <div class="flex items-start"><span class="text-red-500 mr-4 font-black text-lg leading-none">+</span> 1-on-1 Access</div>
+                    </div>
+                    
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform" class="w-full py-6 rounded-2xl border-2 border-red-500/30 text-red-500 font-black uppercase text-[11px] tracking-[0.2em] text-center hover:bg-red-500 hover:text-white transition-all duration-300">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-6xl font-black mb-20 uppercase tracking-tighter text-center">GOT <span class="neon-text italic">QUESTIONS?</span></h2>
+            
             <div class="space-y-4">
-                <div class="glass p-6 rounded-2xl flex justify-between items-center font-bold text-sm uppercase">
-                    What is the duration of the cohort? <span>+</span>
-                </div>
-                <div class="glass p-6 rounded-2xl flex justify-between items-center font-bold text-sm uppercase border-neon-green/30">
-                    What editing software do you teach? <span>-</span>
-                </div>
-                <p class="px-6 py-2 text-xs text-gray-500 italic">We cover Adobe Premiere Pro, After Effects, and DaVinci Resolve from beginner to pro levels.</p>
-                <div class="glass p-6 rounded-2xl flex justify-between items-center font-bold text-sm uppercase">
-                    Do you teach video editing from basics? <span>+</span>
-                </div>
+                <details class="glass-panel rounded-3xl group border border-white/5 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="p-8 cursor-pointer font-black uppercase text-sm flex justify-between items-center tracking-wide list-none">
+                        What is the duration of the cohort?
+                        <span class="neon-text text-2xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed font-medium">
+                        The core curriculum runs intensively for 3 months. However, you retain lifetime access to the recorded materials, the private community, and all future updates to the course modules.
+                    </div>
+                </details>
+
+                <details class="glass-panel rounded-3xl group border border-white/5 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="p-8 cursor-pointer font-black uppercase text-sm flex justify-between items-center tracking-wide list-none">
+                        What editing software do you teach?
+                        <span class="neon-text text-2xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed font-medium">
+                        We cover Adobe Premiere Pro, After Effects, and DaVinci Resolve from absolute beginner to advanced professional levels. We also integrate cutting-edge AI tools for workflow optimization.
+                    </div>
+                </details>
+
+                <details class="glass-panel rounded-3xl group border border-white/5 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="p-8 cursor-pointer font-black uppercase text-sm flex justify-between items-center tracking-wide list-none">
+                        Do you teach video editing from basics?
+                        <span class="neon-text text-2xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed font-medium">
+                        Yes. Module 1 is designed specifically for individuals who have never opened an editing timeline. We scale up rapidly, ensuring foundational strength before introducing advanced motion graphics and VFX.
+                    </div>
+                </details>
+
+                <details class="glass-panel rounded-3xl group border border-white/5 [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="p-8 cursor-pointer font-black uppercase text-sm flex justify-between items-center tracking-wide list-none">
+                        How does the placement support work?
+                        <span class="neon-text text-2xl transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <div class="px-8 pb-8 text-gray-400 text-sm leading-relaxed font-medium">
+                        For students in the Ultimate tier, we actively review portfolios and connect top performers with our network of agencies, YouTubers, and brands looking for elite editing talent.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 text-center border-t border-white/5">
-        <div class="text-xl font-black uppercase italic mb-8">THE <span class="neon-green">ACADEMY</span></div>
-        <p class="text-xs text-gray-600 font-black uppercase tracking-[0.6em]">Made by Abhishek Nair</p>
+    <footer class="py-24 px-6 bg-[#000000] border-t border-white/10">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            <div class="text-3xl font-black uppercase tracking-tighter italic mb-10">THE <span class="neon-text">ACADEMY</span></div>
+            
+            <div class="flex flex-wrap justify-center gap-8 mb-16 text-gray-500 uppercase font-black text-[11px] tracking-[0.2em]">
+                <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                <a href="#" class="hover:text-white transition-colors">YouTube</a>
+                <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+            </div>
+            
+            <p class="text-gray-600 text-xs mb-6 font-bold tracking-widest uppercase">© 2026 The Social Media Academy. All Rights Reserved.</p>
+            <div class="inline-block px-6 py-2 border border-white/10 rounded-full text-[10px] text-gray-400 uppercase tracking-[0.5em] font-black mt-4">
+                Made By Abhishek Nair
+            </div>
+        </div>
     </footer>
 
 </body>
