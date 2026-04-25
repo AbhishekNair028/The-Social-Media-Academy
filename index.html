@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Media Academy | By Abhishek Nair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; }
+        .neon-green { color: #DFFF00; }
+        .bg-neon-green { background-color: #DFFF00; }
+        .border-neon-green { border-color: #DFFF00; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .glass-card:hover { transform: translateY(-8px); border-color: #DFFF00; background: rgba(255, 255, 255, 0.05); }
+        .hero-gradient { background: radial-gradient(circle at center, rgba(223, 255, 0, 0.08) 0%, rgba(0, 0, 0, 1) 70%); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xl font-extrabold tracking-tighter uppercase">The <span class="neon-green">Academy</span></div>
+            <div class="hidden md:flex space-x-10 text-[13px] font-medium text-gray-400 uppercase tracking-widest">
+                <a href="#why" class="hover:text-white transition">Why us</a>
+                <a href="#learn" class="hover:text-white transition">Curriculum</a>
+                <a href="#pricing" class="hover:text-white transition">Pricing</a>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform?usp=header" class="bg-neon-green text-black px-8 py-2.5 rounded-full font-bold text-xs uppercase hover:scale-105 transition active:scale-95">Join Now</a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-6 hero-gradient min-h-screen flex flex-col items-center justify-center text-center">
+        <div class="max-w-5xl mx-auto">
+            <div class="relative inline-block mb-12">
+                <img src="Gemini_Generated_Image_9ejnt49ejnt49ejn.jpg" alt="TSMA Hero" class="w-full max-w-2xl mx-auto rounded-2xl shadow-[0_0_50px_rgba(223,255,0,0.15)] border border-white/10">
+            </div>
+            
+            <p class="text-gray-500 font-bold mb-4 uppercase tracking-[0.3em] text-[12px]">Abhishek Nair presents</p>
+            <h1 class="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-none uppercase">
+                Not just a <br><span class="neon-green italic">Growth</span> Cohort
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium">The ultimate beginner-friendly cohort, now powered with the most insane AI tools ever.</p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#pricing" class="bg-neon-green text-black px-12 py-5 rounded-full font-black text-sm uppercase hover:shadow-[0_0_30px_rgba(223,255,0,0.4)] transition duration-300">Start learning</a>
+                <a href="#why" class="px-12 py-5 rounded-full font-black text-sm uppercase border border-white/20 hover:bg-white/5 transition">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-32 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter">The Best Prices Ever</h2>
+                <p class="text-gray-500 text-lg">Pick your plan and start CREATING today. One flat fee.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-10 rounded-[40px] flex flex-col">
+                    <h3 class="text-sm font-black text-gray-400 mb-2 tracking-widest uppercase">Essential</h3>
+                    <div class="text-gray-600 line-through text-lg">₹8000</div>
+                    <div class="text-5xl font-black mb-8">₹4999 <span class="text-xs font-normal text-gray-500">+GST</span></div>
+                    <div class="space-y-4 mb-12 flex-grow">
+                        <div class="flex items-start text-sm text-gray-300"><span class="neon-green mr-3 text-xl font-bold">+</span> Studio Quality Lectures</div>
+                        <div class="flex items-start text-sm text-gray-300"><span class="neon-green mr-3 text-xl font-bold">+</span> Weekly 2 Live Classes</div>
+                        <div class="flex items-start text-sm text-gray-300"><span class="neon-green mr-3 text-xl font-bold">+</span> Access to the Community</div>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform?usp=header" class="w-full py-5 rounded-2xl bg-white/10 text-white font-black uppercase text-xs hover:bg-white hover:text-black transition duration-300 text-center">Join Now</a>
+                </div>
+
+                <div class="glass-card p-10 rounded-[40px] border-neon-green/40 bg-white/5 relative flex flex-col scale-105 z-10">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-neon-green text-black text-[10px] font-black px-6 py-1.5 rounded-full uppercase tracking-widest">Most Popular</div>
+                    <h3 class="text-sm font-black text-neon-green mb-2 tracking-widest uppercase">Elite</h3>
+                    <div class="text-gray-600 line-through text-lg">₹12,000</div>
+                    <div class="text-5xl font-black mb-8">₹6999 <span class="text-xs font-normal text-gray-500">+GST</span></div>
+                    <div class="space-y-4 mb-12 flex-grow">
+                        <div class="flex items-start text-sm text-white font-bold"><span class="neon-green mr-3 text-xl">+</span> Everything in Essential</div>
+                        <div class="flex items-start text-sm text-gray-300"><span class="neon-green mr-3 text-xl font-bold">+</span> Dedicated Mentors to Guide you</div>
+                        <div class="flex items-start text-sm text-gray-300"><span class="neon-green mr-3 text-xl font-bold">+</span> BONUS: Weekly Masterclasses</div>
+                        <div class="flex items-start text-sm text-gray-300"><span class="neon-green mr-3 text-xl font-bold">+</span> Assets worth 5000/-</div>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform?usp=header" class="w-full py-5 rounded-2xl bg-neon-green text-black font-black uppercase text-xs hover:shadow-[0_0_20px_rgba(223,255,0,0.4)] transition duration-300 text-center">Join Now</a>
+                </div>
+
+                <div class="glass-card p-10 rounded-[40px] border-red-500/20 bg-red-500/5 flex flex-col">
+                    <h3 class="text-sm font-black text-red-500 mb-2 tracking-widest uppercase">Ultimate</h3>
+                    <div class="text-gray-600 line-through text-lg">₹25,000</div>
+                    <div class="text-5xl font-black mb-8">₹14999 <span class="text-xs font-normal text-gray-500">+GST</span></div>
+                    <div class="space-y-4 mb-12 flex-grow">
+                        <div class="flex items-start text-sm text-white font-bold"><span class="neon-green mr-3 text-xl">+</span> Everything in Elite</div>
+                        <div class="flex items-start text-sm text-gray-300"><span class="neon-green mr-3 text-xl font-bold">+</span> Personal Learning Manager</div>
+                        <div class="flex items-start text-sm text-gray-300"><span class="neon-green mr-3 text-xl font-bold">+</span> Placement Support worth 30k/m</div>
+                        <div class="flex items-start text-sm text-gray-300"><span class="neon-green mr-3 text-xl font-bold">+</span> Special Group with Abhishek</div>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform?usp=header" class="w-full py-5 rounded-2xl bg-white text-black font-black uppercase text-xs hover:bg-neon-green transition duration-300 text-center">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 px-6 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <div class="text-2xl font-black tracking-tighter mb-4 uppercase">thesocialmediaacademy.in</div>
+            <p class="text-gray-500 text-center text-sm mb-12 max-w-sm">The ultimate beginner-friendly video editing cohort, now powered with the most insane AI tools ever.</p>
+            <div class="flex space-x-6 mb-12">
+                <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">YouTube</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">Twitter</a>
+            </div>
+            <div class="text-[11px] text-gray-600 uppercase tracking-[0.4em] font-bold">Made by Abhishek Nair</div>
+        </div>
+    </footer>
+
+</body>
+</html>
