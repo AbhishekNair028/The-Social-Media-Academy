@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Media Academy | By Abhishek Nair</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; scroll-behavior: smooth; overflow-x: hidden; }
+        .neon-green { color: #DFFF00; }
+        .bg-neon-green { background-color: #DFFF00; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; }
+        .glass-card:hover { transform: translateY(-5px); border-color: #DFFF00; background: rgba(255, 255, 255, 0.05); }
+        .hero-gradient { background: radial-gradient(circle at center, rgba(223, 255, 0, 0.05) 0%, rgba(0, 0, 0, 1) 80%); }
+        .faq-card { border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 24px 0; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xl font-black tracking-tighter uppercase">The <span class="neon-green">Academy</span></div>
+            <div class="hidden md:flex space-x-8 text-[11px] font-bold text-gray-500 uppercase tracking-widest">
+                <a href="#why" class="hover:text-white transition">Why us</a>
+                <a href="#learn" class="hover:text-white transition">Curriculum</a>
+                <a href="#pricing" class="hover:text-white transition">Pricing</a>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform?usp=header" class="bg-neon-green text-black px-6 py-2 rounded-full font-black text-xs uppercase hover:scale-105 transition">Join Now</a>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 px-6 hero-gradient flex flex-col items-center text-center">
+        <div class="max-w-4xl mx-auto">
+            <img src="Gemini_Generated_Image_9ejnt49ejnt49ejn.jpg" class="w-full max-w-xl mx-auto rounded-xl shadow-2xl mb-12 border border-white/10">
+            <p class="text-gray-500 font-bold mb-4 uppercase tracking-[0.4em] text-[10px]">Abhishek Nair presents</p>
+            <h1 class="text-5xl md:text-8xl font-black mb-8 tracking-tighter uppercase leading-none">Not just a <br><span class="neon-green italic">Growth</span> Cohort</h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto">The ultimate beginner-friendly cohort, now powered with the most insane AI tools ever.</p>
+            <a href="#pricing" class="bg-neon-green text-black px-12 py-5 rounded-full font-black text-sm uppercase hover:shadow-[0_0_30px_rgba(223,255,0,0.3)] transition">Join the waitlist</a>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-white/5">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-black mb-12 text-center uppercase">More Success Stories</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-sm text-gray-400 leading-relaxed">
+                <div class="glass-card p-8 rounded-3xl">
+                    <p class="mb-6">"Enrolling was one of my best decisions. Within a month, I got an internship and now I'm working at an AI startup."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-700"></div>
+                        <span class="font-bold text-white">Deepak Divakar</span>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-3xl">
+                    <p class="mb-6">"I earned ₹50-60k a month from editing... it's not just about editing but how to build an agency."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-700"></div>
+                        <span class="font-bold text-white">Akash</span>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-3xl">
+                    <p class="mb-6">"Before joining I was just an average student... Now I earn ₹40k a month doing video editing."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-700"></div>
+                        <span class="font-bold text-white">Satwik</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="learn" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-black mb-12 uppercase">What you'll learn</h2>
+            <div class="space-y-6">
+                <div class="glass-card p-8 rounded-3xl flex gap-6 items-center">
+                    <div class="text-4xl font-bold text-gray-700">01</div>
+                    <div>
+                        <h3 class="text-xl font-black uppercase mb-1">Advanced Video Editing</h3>
+                        <p class="text-gray-500">Master Adobe Premiere Pro, After Effects, and AI Workflows.</p>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-3xl flex gap-6 items-center">
+                    <div class="text-4xl font-bold text-gray-700">02</div>
+                    <div>
+                        <h3 class="text-xl font-black uppercase mb-1">Social Media Growth</h3>
+                        <p class="text-gray-500">Content planning, scripting, and packaging for virality.</p>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-3xl flex gap-6 items-center">
+                    <div class="text-4xl font-bold text-gray-700">03</div>
+                    <div>
+                        <h3 class="text-xl font-black uppercase mb-1">Freelancing & Agency</h3>
+                        <p class="text-gray-500">How to reach out to clients and negotiate high-ticket deals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 px-6 bg-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black uppercase mb-4">Pricing</h2>
+                <p class="text-gray-500 uppercase tracking-widest text-xs">One-time payment. Lifetime value.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-10 rounded-[30px] flex flex-col">
+                    <h3 class="font-black text-gray-400 mb-6 uppercase tracking-widest text-xs">Essential</h3>
+                    <div class="text-4xl font-black mb-8">₹4999</div>
+                    <ul class="space-y-4 mb-10 flex-grow text-gray-400 text-sm">
+                        <li>+ Studio Quality Lectures</li>
+                        <li>+ Weekly 2 live classes</li>
+                        <li>+ Access to the community</li>
+                    </ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform" class="w-full py-4 rounded-xl border border-white/20 text-white font-black uppercase text-xs text-center hover:bg-white hover:text-black transition">Join Now</a>
+                </div>
+                <div class="glass-card p-10 rounded-[30px] border-neon-green flex flex-col scale-105 bg-white/5">
+                    <h3 class="font-black text-neon-green mb-6 uppercase tracking-widest text-xs">Elite</h3>
+                    <div class="text-4xl font-black mb-8">₹6999</div>
+                    <ul class="space-y-4 mb-10 flex-grow text-gray-300 text-sm font-bold">
+                        <li>+ Everything in Essential</li>
+                        <li>+ Dedicated Mentors</li>
+                        <li>+ BONUS: Masterclasses</li>
+                    </ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform" class="w-full py-4 rounded-xl bg-neon-green text-black font-black uppercase text-xs text-center">Join Now</a>
+                </div>
+                <div class="glass-card p-10 rounded-[30px] flex flex-col">
+                    <h3 class="font-black text-red-500 mb-6 uppercase tracking-widest text-xs">Ultimate</h3>
+                    <div class="text-4xl font-black mb-8">₹14999</div>
+                    <ul class="space-y-4 mb-10 flex-grow text-gray-400 text-sm">
+                        <li>+ Everything in Elite</li>
+                        <li>+ Placement Support</li>
+                        <li>+ Private Group Access</li>
+                    </ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe2rNjWmWsXFXfEg_XhNzNK4ZuQA1ttSI-0GtFcI-VbvqPoHQ/viewform" class="w-full py-4 rounded-xl border border-white/20 text-white font-black uppercase text-xs text-center hover:bg-white hover:text-black transition">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-black mb-12 uppercase">Got Questions?</h2>
+        <div class="faq-card">
+            <p class="font-bold mb-2 uppercase text-xs text-gray-400 tracking-widest">Duration</p>
+            <p class="text-lg">How long is the cohort? <span class="text-gray-500 block text-sm mt-2">The core curriculum runs for 3 months with lifetime access.</span></p>
+        </div>
+        <div class="faq-card">
+            <p class="font-bold mb-2 uppercase text-xs text-gray-400 tracking-widest">Software</p>
+            <p class="text-lg">What software do you teach? <span class="text-gray-500 block text-sm mt-2">Premiere Pro, After Effects, and various AI content tools.</span></p>
+        </div>
+    </section>
+
+    <footer class="py-20 px-6 border-t border-white/10 text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-2xl font-black mb-8 uppercase tracking-tighter">The Social Media Academy</div>
+            <div class="text-[10px] text-gray-600 uppercase tracking-[0.5em] font-black">Made by Abhishek Nair</div>
+        </div>
+    </footer>
+
+</body>
+</html>
